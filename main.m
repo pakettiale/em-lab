@@ -1,10 +1,14 @@
-delta_r = 0.0002; %height/layers
-delta_y = 0.0002; %width/rows
-layers = 20;
-rows = 20;
-r = 0.05;
-d = 0.075;
-I = 1;
+
+
+layers = 20; %number of wire layers in coil
+rows = 20; %number of wires in one row
+
+delta_r = 0.0002; %height of loop cross section/layers
+delta_y = 0.0002; %width of coil/rows
+
+r = 0.05; %inner radius of the coil
+d = 0.075; %distance between the two coils
+I = 1; %current that flows through the coil
 
 y_vec = -1:0.01:1;
 H_tot = [];
