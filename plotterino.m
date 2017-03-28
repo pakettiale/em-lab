@@ -1,4 +1,5 @@
 
+main;
 
 close all
 figure
@@ -7,8 +8,6 @@ line([0 0], [0 max(H_tot)])
 line([d d], [0 max(H_tot)])
 plot(y_vec,H_tot)
 axis tight
-
-main;
 
 mag = 10^-3 * [2.95,3.65,4.47,5.38,6.32,7.16,7.84,8.23,8.35,8.37,8.31,8.19,7.9,7.33,6.55,5.67,4.72,3.8,3.04,2.38];
 error = 10^-3 * 0.03 * ones(size(mag));

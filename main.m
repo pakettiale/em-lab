@@ -9,7 +9,7 @@ delta_y = width / rows; %width of coil/rows
 
 r = 0.125/2; %inner radius of the coil
 d =1*r; %distance between the two coils
-I = 1.8; %current that flows through the coil
+%I = 1.8; %current that flows through the coil
 
 y_vec = -0.06:(d/100):d+0.06;
 H_tot = [];
