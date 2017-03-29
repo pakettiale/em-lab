@@ -19,13 +19,23 @@ for y = y_vec
         for m = 1:rows
             %out(n,m) = H(r + delta_r*n, y, I) + H(r + delta_r*n, d - y, I);
             %out(n,m) = H(r + delta_r*n, y - m*delta_y, I) + H(r + delta_r*n, d - y + m*delta_y, I);
-            out(n,m) = H(r , y , current(y)) + H(r , d - y, current(y));
+            out(n,m) = H(r , y , 1.8) + H(r , d - y, 1.8);
         end
     end
 
 H_tot(end + 1) = sum(sum(out))*4*pi*10^-7;
 
 end
+H_min = [];
+for y = y_vec
+    H_min(end + 1) = 320*4*pi*10^-7*(H(r , y , 1.75) + H(r , d - y, 1.75));
+end
+
+H_max = [];
+for y = y_vec
+    H_max(end + 1) = 320*4*pi*10^-7*(H(r , y , 1.85) + H(r , d - y, 1.85));
+end
+
 % close all
 % figure
 % hold on
